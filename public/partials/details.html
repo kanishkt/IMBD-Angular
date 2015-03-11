@@ -1,0 +1,119 @@
+
+<div ng-repeat="phone in phones">
+             <div ng-if="phone.rank==rank">
+            	  <div ng-if="phone.rank==1">
+            			<div class="row">
+            				<div class="large-12 columns">
+            					<a href="#/detail/{{phone.rank+1}}">next-></a>
+            				</div>
+            		</div>
+            	  </div>
+            	  <div ng-if="phone.rank==250">
+            	  	   <div class="row">
+            			   <div class="large-9 columns">
+            	  	   			<a href="#/detail/{{phone.rank-1}}"><-prev</a>
+            	  	   		</div>
+            	  	   	</div>
+
+            	  </div>
+            	    <div ng-if="phone.rank!=1">
+            	    	<div ng-if="phone.rank!=250">
+            	    		<div class="row">
+            	    			<div class="large-3 columns">
+            	    		<a href="#/detail/{{phone.rank-1}}"><-prev</a>
+            	    	</div>
+            	    		<div class="large-9 columns">
+            	    		<a href="#/detail/{{phone.rank+1}}">next-></a>
+            	    	</div>
+            	    	  </div>
+            		</div>
+            	</div>
+            		<p>
+            		<div class="row">
+            			<div class ="large-5 columns">
+            		<img ng-src="./data/images/{{phone.imdbID}}.jpg"></img>
+            	</div>
+            </div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Title : </h3>{{phone.title}}
+            		</div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Rank : </h3>{{phone.rank}} 
+            	    </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Rated : </h3>{{phone.rated}}
+            	  </div>
+            	</div> 
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Released : </h3>{{phone.released}}
+            	  </div>
+            	</div> 
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Runtime : </h3>{{phone.runtime}}
+            	  </div>
+            	</div> 
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Genre : </h3>{{phone.genre}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Director : </h3>{{phone.director}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Actors: </h3>{{phone.actors}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-6 columns">
+            		<h3>Plot : </h3>{{phone.plot}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Language : </h3>{{phone.language}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Country : </h3>{{phone.country}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Awards : </h3>{{phone.awards}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>Metascore : </h3>{{phone.metascore}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>IMBDRating : </h3>{{phone.imdbRating}} 
+            	  </div>
+            	</div>
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>IMDBVotes : </h3>{{phone.imdbVotes}}
+            	  </div>
+            	</div> 
+            		<div class="row">
+            			<div class ="large-4 columns">
+            		<h3>IMBDID : </h3>{{phone.imdbID}}
+            	  </div>
+            	</div>
+            		</p>
+                </div>
+ </div>

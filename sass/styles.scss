@@ -4,3 +4,71 @@
 @import "variables";
 @import "mixins";
 @import "base";
+
+@import url("http://fonts.googleapis.com/css?family=Merienda+One");
+
+#part-2
+{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	background-color: $grey;
+}
+
+#part-3
+{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	background-color: $white;
+}
+
+#title{
+	font: 400 50px/1.2 'Merienda One', Helvetica, sans-serif;
+	font-size: 30px;
+	padding-top:10px;
+}
+.sample-show-hide {
+  padding:10px;
+  border:1px solid black;
+  background:white;
+}
+
+.sample-show-hide {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.sample-show-hide.ng-hide {
+  opacity:0;
+}
+
+.footer {
+	width:100%;
+	height:70px;
+	position:relative;
+	left:0px;
+	below:0px;
+	background:$black;
+}
+
+.sectioninner2{
+	color:$white;
+	margin-top:30px;
+	margin-left:10px;
+	bottom:0px;
+	padding-top:20px;
+}
+
+#img{
+	height:700px;
+	width:500px;
+	padding:50px;
+	margin-left:80px;
+}
+
+@media only screen {
+  .top-bar-section ul li.active > a { background: #22C0E8 !important; }
+  .top-bar-section ul li.active > a:hover { color: #303030 !important; background:#21c5ed !important; }
+  .top-bar-section li a:not(.button):hover { color: white; background:#22C0E8 !important; }
+}

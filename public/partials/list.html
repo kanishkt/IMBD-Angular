@@ -1,0 +1,33 @@
+<div>
+    <div class ="row">
+        <div class="large-1 columns">
+        Search:
+    </div>
+    <div class ="large-5 columns">
+        <input ng-model="query">
+    </div>
+        <div class="large-2 columns">
+         Sort by:
+         </div>
+        <div class="large-4 columns">
+         <select style="display: inline;" ng-model="orderProp">
+            <option value="title">Alphabetical</option>
+            <option value="rank">Rank</option>
+            <option value="-title">Reverse Alphabets</option>
+        </select>
+    </div>
+    </div>
+<div ng-init="checked=true">
+    <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"><p>Show Plot (Animation Here)</p>
+
+    <div>
+        <ul>
+            <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+                <a href="#/detail/{{phone.rank}}">{{phone.title}}</a></a>
+                <div class="check-element sample-show-hide" ng-show="checked" style="clear:both;">
+                <p>Plot: {{phone.plot}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

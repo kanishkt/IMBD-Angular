@@ -1,0 +1,40 @@
+<div>
+			<button ng-click="orderProp='All'" class="small primary button">All</a></button>
+			<button ng-click="orderProp='Action'" class="small primary button">Action</button>
+			<button ng-click="orderProp='Adventure'" class="small primary button">Adventure</button>
+			<button ng-click="orderProp='Crime'" class="small primary button">Crime</button>
+			<button ng-click="orderProp='Comedy'" class="small primary button">Comedy</button>
+			<button ng-click="orderProp='Drama'" class="small primary button">Drama</button>
+			<button ng-click="orderProp='Musical'" class="small primary button">Musical</button>
+			<button ng-click="orderProp='Mystery'" class="small primary button">Mystery</button>
+			<button ng-click="orderProp='Romance'" class="small primary button">Romance</button>
+			<button ng-click="orderProp='Sci-Fi'" class="small primary button">Sci-Fi</button>
+			<button ng-click="orderProp='Thriller'" class="small primary button">Thriller</button>
+			<button ng-click="orderProp='Western'" class="small primary button">Western</button>
+			<p>You Selected : {{orderProp}}</p>
+   	    <div ng-if="orderProp=='All'">
+   		<ul class="large-block-grid-3 large-centered small-block-grid-3 medium-block-grid-3">
+   			<li ng-repeat="phone in phones">
+				<a href="#/detail/{{phone.rank}}"><img ng-src="./data/images/{{phone.imdbID}}.jpg"></img></a>
+				</div>
+	   		</li>
+	   	</ul>
+	   </div>
+	   <div ng-if="orderProp!='All'">
+	   	<div class="row" data-equalizer>
+	   	 <div ng-repeat="phone in phones">
+	   	 	<div ng-repeat="genre in phone.genre">
+	   	 		<div ng-if="genre==orderProp">
+	   	 		<div class="large-3 large-offset-1 columns" data-equalizer-watch>
+	   	 			<a href="#/detail/{{phone.rank}}"><img ng-src="./data/images/{{phone.imdbID}}.jpg"></img></a>
+	   	 		</div>
+	   	 		</div>
+	   	 	</div>
+	   	 </div>
+	   	 </div>
+	   	</div>
+
+
+</div>
+
+

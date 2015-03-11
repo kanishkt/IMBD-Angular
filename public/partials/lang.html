@@ -1,0 +1,25 @@
+<div>
+	<p>Please Select One/Multiple Languages.</p>
+	<input id="checkbox1" type="checkbox" ng-click="updateSelection($event, 'English')"><label for="checkbox1">English</label>
+    <input id="checkbox2" type="checkbox" ng-click="updateSelection($event, 'French')"><label for="checkbox2">French</label>
+    <input id="checkbox3" type="checkbox" ng-click="updateSelection($event, 'Italian')"><label for="checkbox2">Italian</label>
+    <input id="checkbox4" type="checkbox" ng-click="updateSelection($event, 'Spanish')"><label for="checkbox2">Spanish</label>
+    <input id="checkbox5" type="checkbox" ng-click="updateSelection($event, 'Cantonese')"><label for="checkbox2">Cantonese</label>
+    <input id="checkbox6" type="checkbox" ng-click="updateSelection($event, 'Japanese')"><label for="checkbox2">Japanese</label>
+    
+    <p><b>You selected movies in Language:</b></p>
+    <div ng-repeat="lang in orderProp">
+    	<p>{{lang}}</p>
+    </div>
+
+    <p><b>Here are the Movies:</b></p>
+    <div ng-repeat="lang in orderProp">
+    	<div ng-repeat="phone in phones">
+    		<div ng-repeat="movLang in phone.language">
+    			<div ng-if="lang==movLang">
+    				<p><a href="#/detail/{{phone.rank}}">{{phone.title}}</a></a> :- {{lang}}<p>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
