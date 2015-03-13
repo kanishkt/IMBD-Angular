@@ -62,9 +62,17 @@
 
 #img{
 	height:700px;
-	width:500px;
+	width:600px;
 	padding:50px;
-	margin-left:80px;
+	//margin-left:80px;
+}
+#img2{
+	height:100%;
+	width:600px;
+}
+
+#img:hover { 
+    border: 5px solid #21c5ed;
 }
 
 @media only screen {

@@ -14,12 +14,8 @@
 
     <p><b>Here are the Movies:</b></p>
     <div ng-repeat="lang in orderProp">
-    	<div ng-repeat="phone in phones">
-    		<div ng-repeat="movLang in phone.language">
-    			<div ng-if="lang==movLang">
+    	<div ng-repeat="phone in phones | filter:lang">
     				<p><a href="#/detail/{{phone.rank}}">{{phone.title}}</a></a> :- {{lang}}<p>
     			</div>
-    		</div>
-    	</div>
-    </div>
+        </div>
 </div>
