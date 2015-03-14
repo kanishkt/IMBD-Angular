@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>MP2 Starter</title>
   <script src="./lib/angular/angular.min.js"></script>
+   <script src="./js/app.js"></script>
+    <script src="./js/controllers.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./foundation/css/foundation.css">
   
@@ -124,6 +126,30 @@
 </video>
 </div>
 </section>
+<div ng-app ="myApp" ng-controller="PhoneCityCtrl">
+    <div class="row">
+      <div class="large-4 large-centered medium-centered small-centered columns">
+        <p> City-State Convertor (Extra Credit)<p>
+      </div>
+    </div>
+    <div class ="row">
+        <div class="large-4 columns">
+        Enter Name of a City (First Letter Capital):
+    </div>
+    <div class ="large-2 columns">
+        <input ng-model="query" >
+    </div>
+    <div class="large-3 columns">
+    The State of the City is:
+  </div>
+    <div class="large-3 columns">
+    <select>
+          <option ng-repeat ="phone in phones | filter:query| orderBy:'state'">{{phone.state}}</option>
+    </select>
+  </div>
+</div>
+</div>
+
 <footer  class="footer">
              <div class="sectioninner2">
               <p>© 2015 Developed by Kanishk Thareja</p>

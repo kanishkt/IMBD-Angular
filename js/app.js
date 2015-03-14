@@ -23,3 +23,13 @@ phonecatApp.config(['$routeProvider',
                 redirectTo: '/list'
             });
     }]);
+
+var myApp = angular.module('myApp', []);
+
+myApp.controller('PhoneCityCtrl',  ['$scope', '$http',
+    function ($scope, $http) {
+
+    $http.get('data/state_city.json').success(function(data){
+        $scope.phones = data;
+    });
+}]);
